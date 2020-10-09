@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
     console.log('a user connected')
+    socket.on('data', (msg) => {
+        console.log('message ' + msg)
+    })
 })
 
 http.listen(3000, () => {
