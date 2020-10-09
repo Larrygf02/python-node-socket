@@ -15,6 +15,7 @@ def my_message(data):
 def disconnet():
     print('disconnect from server')
 
+# send message
 sio.connect('http://localhost:3000')
 my_message('hello')
-sio.wait()
+sio.disconnect()
